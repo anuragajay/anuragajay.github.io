@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MIT 6.884 - Computational Sensorimotor Learning</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html" style="text-decoration:none;">MIT 6.884 - Computational Sensorimotor Learning</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html#description" style="text-decoration:none;">Description</a>
+                    </li>
+                    <li>
+                        <a href="index.html#information" style="text-decoration:none;">Information</a>
+                    </li>
+                    <li>
+                        <a href="index.html#readings/assignments" style="text-decoration:none;">Readings | Assignments</a>
+                    </li>
+                    <li>
+                        <a href="index.html#faq" style="text-decoration:none;">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="index.html#people" style="text-decoration:none;">People</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+  </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header"><!-- style="background-image: url('img/underactuated-bg-2.png')"> -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Computational Sensorimotor Learning</h1>
+                        
+
+                        <!-- <span class="subheading">Algorithms for Walking, Running, Swimming, Flying, and Manipulation</span> -->
+                        <hr class="small">
+                        <span class="subheading">Spring 2020</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                  <h2 class="section-heading" id="description">Course Description</h2>
+
+
+		  <p> The course introduces framework for building learning systems that can continously interact with their environment and learn meaningful behavior. Topics include reinforcement learning, imitation learning, model learning, and meta learning. The class goals include:
+            <li> Implement state of the art reinforcement learning, imitation learning and model learning algorithms 
+            </li>
+            <li> Understand research topics in the areas mentioned above
+            </li>
+            <li> Try out some ideas/extensions of your own
+            </li>
+
+           </p>
+
+
+      <p>We would limit enrollment due to the nature of the course. The students will be selected based on their project proposal which they would have to submit at the beginning of the course.</p>
+
+
+                  <h2 class="section-heading" id="information">Course Information</h2>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-4">
+
+                          <h3>Class Time and Location</h3>
+                          
+                            <p style="font-size:16px">Spring semester <br>
+                            (February - May, 2019) <br><br>
+                            Tuesday/Thursday 2.30pm-4pm <br>
+                            <a href="http://whereis.mit.edu/?mapterms=2">2-105</a><br>
+                    
+                        </div>
+                        <div class="col-md-4">
+                          <h3>Office Hours</h3>
+                          <p style="font-size:16px">
+                            Pulkit Agrawal: TBD <br>
+                            Anurag Ajay: TBD <br>
+                        </p>
+                        </div>
+                        <div class="col-md-4">
+                          <h3>Grading Policy</h3>
+                          <p style="font-size:16px">
+                          Assignments: 20%<br>
+                          Participation: 10%<br>
+                          Final Project: 70%<br>
+                        </p>
+                        <p style="font-size:16px">Late assignments will be penalized 10% every 24 hours.</p>
+                        <p style="font-size:16px">No final exam.</p>
+                        </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                          <h3>Class Forums</h3>
+                          <p style="font-size:16px"><a href="https://piazza.com/mit/spring2020/6884">Forums are on Piazza</a> (sign up with your @mit.edu email address). Access Code for piazza will be given in the first lecture. You can also email the instructors for the access code.</p>
+                        </div>
+
+                        <div class="col-md-4">
+                          <h3>Prequisites</h3>
+                          <p style="font-size:16px">Familiarity with reinforcement learning, numerical optimization, and machine learning. Project proposal to be submitted at the start of the course.</p>
+                          <p style="font-size:16px">Coding assignments will be in Python.</p>
+
+                          <p style="font-size:16px">See the <a href="#faq">FAQ</a> if you have any questions about prerequisites.</p>
+                        </div>
+                        
+                    </div>
+        
+                    <hr>
+
+                    <h2 class="section-heading" id="readings/assignments">Lectures, Readings and Assignments</h2>
+
+                    <p> This is a new class and there is no textbook.  We will post relevant reading material. </a>
+
+                    <p> <b><em>Lectures and Readings</em></b><br>
+                    <div class="container sec">
+                        <table class="table">
+                        <tbody>
+                            <tr class="active">
+                                <th>Event</th><th>Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>Description</th><th>Materials / Logistics</th>
+                            </tr>
+
+                            <tr>
+                                <td>Lecture</td>
+                                <td>Feb 4</td>
+                                <td>Questions in Intelligence</td>
+                                <td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Lecture</td>
+                                <td>Feb 6</td>
+                                <td>Current Evaluations (Datasets / Challenges)</td>
+                                <td>
+                                    <ol>
+                                        <li> Initiate project discussions and team formation </li>
+                                        <li> <b> Release AIRobot simulator and Docker image for the class </b> </li>
+                                    </ol>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Lecture</td>
+                                <td>Feb 11</td>
+                                <td>On Policy RL</td>
+                                <td>
+                                    <ol>
+                                        <li> <b> Release HW1 </b> </li>
+                                    </ol>
+                                </td>
+                            </tr> 
+
+                            <tr>
+                                <td>Lecture</td>
+                                <td>Feb 13</td>
+                                <td>Off Policy RL</td>
+                                <td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Discussion</td>
+                                <td>Feb 18</td>
+                                <td>Papers on RL Algorithms</td>
+                                <td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Discussion</td>
+                                <td>Feb 20</td>
+                                <td>Papers on RL Applications</td>
+                                <td>
+                                </td>
+                            </tr> 
+
+                            <tr>
+                                <td>Discussion</td>
+                                <td>Feb 25</td>
+                                <td>Transfer Learning in Context of Learning Policies</td>
+                                <td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Discussion</td>
+                                <td>Feb 27</td>
+                                <td>Learning from Curriculum</td>
+                                <td>
+                                </td>
+                            </tr>  
+
+                            <tr>
+                                <td>Discussion</td>
+                                <td>Mar 3</td>
+                                <td>Algorithms for Exploration</td>
+                                <td>
+                                </td>
+                            </tr> 
+
+                            <tr>
+                                <td>Lecture</td>
+                                <td>Mar 5</td>
+                                <td>Guest Lecture on Exploration</td>
+                                <td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Lecture</td>
+                                <td>Mar 10</td>
+                                <td>Imitation Learning</td>
+                                <td>
+                                    <ol>
+                                        <li><b>Release HW2</b></li>
+                                    </ol>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Discussion</td>
+                                <td>Mar 12</td>
+                                <td>Papers on Imitation Learning</td>
+                                <td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Discussion</td>
+                                <td>Mar 17</td>
+                                <td>Papers on Inferring Reward Functions</td>
+                                <td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Discussion</td>
+                                <td>Mar 19</td>
+                                <td>Hierarchial Learning (RL + Imitation)</td>
+                                <td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Discussion</td>
+                                <td>Mar 31</td>
+                                <td>Representation Learning in Context of Control</td>
+                                <td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Presentation</td>
+                                <td>Apr 2</td>
+                                <td>Midterm Project Presentations</td>
+                                <td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Lecture</td>
+                                <td>Apr 7</td>
+                                <td>Math One Should Know</td>
+                                <td>
+                                    <ol>
+                                        <li><b>Release Handout</b></li>
+                                    </ol>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Lecture</td>
+                                <td>Apr 9</td>
+                                <td>Methods for Trajectory Optimization</td>
+                                <td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Lecture</td>
+                                <td>Apr 14</td>
+                                <td>Learning Models</td>
+                                <td>
+                                    <ol>
+                                        <li><b>Release HW3</b></li>
+                                    </ol>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Discussion</td>
+                                <td>Apr 16</td>
+                                <td>Papers on Learning Models</td>
+                                <td>
+                                </td>
+                            </tr>                            
+
+                            <tr>
+                                <td>Discussion</td>
+                                <td>Apr 21</td>
+                                <td>Neural Network Architectures</td>
+                                <td>
+                                </td>
+                            </tr> 
+
+                            <tr>
+                                <td>Discussion</td>
+                                <td>Apr 23</td>
+                                <td>Question in Robustness, constraining solutions NNets find</td>
+                                <td>
+                                </td>
+                            </tr> 
+
+                            <tr>
+                                <td>Lecture</td>
+                                <td>Apr 28</td>
+                                <td>Program Synthesis</td>
+                                <td>
+                                </td>
+                            </tr> 
+
+                            <tr>
+                                <td>Discussion</td>
+                                <td>Apr 30</td>
+                                <td>Models + RL</td>
+                                <td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Discussion</td>
+                                <td>May 5</td>
+                                <td>Learning from Multiple Modalities</td>
+                                <td>
+                                </td>
+                            </tr> 
+
+                            <tr>
+                                <td>Discussion</td>
+                                <td>May 7</td>
+                                <td>Models + Imitation + RL</td>
+                                <td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Discussion</td>
+                                <td>May 12</td>
+                                <td>Multi Agent Systems</td>
+                                <td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Discussion</td>
+                                <td>May 14</td>
+                                <td>Role of Language</td>
+                                <td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Discussion</td>
+                                <td>May 19</td>
+                                <td>Connections to Classical Method</td>
+                                <td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Lecture</td>
+                                <td>May 21</td>
+                                <td>What can we learn from cognitive science</td>
+                                <td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Presentation</td>
+                                <td>TBD</td>
+                                <td>Midterm Project Presentations</td>
+                                <td>
+                                </td>
+                            </tr>                                                                                                                                                                                                                                                                      
+
+                        </tbody>
+                        </table>
+                    </div>
+
+                    <p> <b><em>Assignments</em></b><br>
+                        <ul>
+                            <li> HW1 </li>
+                            <li> HW2 </li>
+                            <li> HW3 </li>
+                        </ul>
+
+                    <p><b><em>Submission of Assignments</em></b><br>
+                    We'll be using <a href="http://gradescope.com/">Gradescope</a> for problem set submission and grading. Each problem set is weighted equally. The login code for this class will be posted on Piazza -- please create an account and add yourself to this class using that code only if you are taking this class for credit. Grading will rely on review of the submitted code and writeup. More details will be provided when assignments are released.</p>
+
+                    <p><b><em>Collaboration Policy</em></b><br>
+                    Collaboration is encouraged, but the work you submit for assignments is expected to be <em>entirely your own</em>. That is, the writing and code must be yours, and you must fully understand everything that you hand in. Discussing the details of how to solve a problem is fine, but you must write the solution yourself. To avoid plagiarizing, you shouldn't be looking at someone else's solution while you write down your own. If you collaborated significantly (use your own discretion for "significantly") on a problem, list the people you collaborated with next to your solution. </p>
+                    <hr>
+
+                    <h2 class="section-heading" id="final-projects">Final Projects</h2>
+
+                    <p>The final project will be your opportunity to explore
+                      some of the topics introduced in the course more
+                      deeply.</p>
+
+                    <p> Details about the final projects will be announced
+                      early in the semester.
+                    </p>
+
+                    <hr>
+                    <h2 class="section-heading" id="faq">FAQ</h2>
+
+                  <p><em><b>What will assignments be like?</b></em></br>
+                    The assignments will consist of implementing state of the art reinforcement learning, imitation learning, and model learning algorithms. Programming assignments will be in Python. All assignments (both hand-written components and programming components) will be graded using Gradescope.</p>
+
+                    <p><em><b>I am not sure if I fit the prerequisites, what should I do?</b></em></br>
+		              Please speak to a staff member.
+
+
+                    <p><em><b>What can I do to best prepare for success in the class?</b></em></br>
+                    The course requires familiarity with reinforcement learning, numerical optimization, and machine learning. You should be able to propose a project relevant to these topics. If you would like to prepare as best as possible, here is what we recommend:
+                    <ul>
+                        <li>Linear Algebra:</li>
+                        <ul>
+                            <li>A strong, intuitive understanding of Linear Algebra will very much help you with this class. To brush up on linear algebra, the content and video lectures from Gilbert Strang's classic course, <u><a href="https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/index.htm">MIT 18.06</a></u> have helped many students in the past.</li>
+                            <li>Another good resource is the textbook <em>Linear Algebra Done Right</em> by Sheldon Axler.</li>
+                        </ul>
+                        <li>Programming in Python</li>
+                        <ul>
+                            <li>If you are somewhat familiar with Python but would like to brush up on syntax, this <u><a href="http://cs231n.github.io/python-numpy-tutorial/">tutorial from Stanford CS231n</a></u> provides a good overview.</li>
+                            <li>If you are an absolute beginner with Python, <u><a href="https://www.codecademy.com/">Codecademy</a></u> provides a friendly introduction.</li>
+                        </ul>
+                        <li>Mathematical Optimization</li>
+                            <ul>
+                                <li>We will teach you what you need to know about optimization, but acquiring a background in the subject will help you deepen understanding.</li>
+                                <li><u><a href="http://ee364a.stanford.edu/videos.html">Video lectures on Convex Optimization</a></u> by Stephen Boyd are recommended, as is the reference textbook <em>Convex Optimization</em> by Boyd and Vandenberghe.</li>
+                            </ul>
+                        <li>Machine Learning</li>
+                        <ul>
+                          <li>Basic background in Machine Learning will help.  <a href="https://introml.mit.edu/fall19"> 6.036 </a> is a good introduction.  There are also many great introductory classes online, <u><a href="https://www.coursera.org/learn/machine-learning">Andrew Ng's</a></u> is one.  
+                        </ul>
+                        <li>Reinforcement Learning</li>
+                        <ul>
+                          <li>Basic background in Reinforcement Learning will help.  <a href="http://incompleteideas.net/book/the-book-2nd.html"> Sutton & Barto, Reinforcement Learning: An Introduction </a> is a good introduction.  
+                        </ul>                        
+                    </ul>
+                    <hr>
+
+                    <h2 class="section-heading" id="people">People</h2>
+
+                    <p>You can contact the course staff at: csl-staff [AT] mit [DOT] edu</p>
+
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 text-center">
+                            <div class="service-box">
+                                <h4>Instructor</h4>
+                                <img height="300" src="img/Pulkit-Agrawal.jpg"/>
+                                <p class="text-muted"><a href="http://people.csail.mit.edu/pulkitag/">Pulkit Agrawal</a></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 text-center">
+                            <div class="service-box">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 text-center">
+                            <div class="service-box">
+                                <h4>Teaching Assistant</h4>
+                                <img height="300" src="img/AnuragAjay.jpg"/>
+                                <p class="text-muted"><a href="https://anuragajay.github.io">Anurag Ajay</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="copyright text-muted">Copyright &copy 2020-2021, Improbable AI @ CSAIL</p>
+                    <p class="copyright text-muted">Web design with Bootstrap
+                      | Contact: csl-staff [AT] mit [dot] edu</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
