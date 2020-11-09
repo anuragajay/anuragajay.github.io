@@ -23,6 +23,8 @@
               </p>
               <p>I am a Ph.D. student in EECS at <a href="https://csail.mit.edu">MIT CSAIL</a> advised by Professor <a href="https://people.csail.mit.edu/pulkitag/">Pulkit Agrawal</a>. I am grateful for support from MIT presidential fellowship.
               </p>
+              <p>In Summer 2020, I did a research internship with <a href="https://research.google/people/105364/">Ofir Nachum</a> and <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a> at <a href="https://research.google/teams/brain/">Google Brain</a>, working on unsupervised skill discovery for improving offline deep reinforcement learning.                
+              </p>
               <p>
                In May 2019, I received my S.M. in EECS from MIT advised by Professor <a href="https://people.csail.mit.edu/lpk/">Leslie Kaelbling</a> and Professor <a href="https://web.mit.edu/cocosci/josh.html">Josh Tenenbaum</a>. Before MIT, I completed my bachelor's degree in EECS from <a href="https://eecs.berkeley.edu">UC Berkeley</a> where I worked with Professor <a href="https://people.eecs.berkeley.edu/~pabbeel/">Pieter Abbeel</a> and Professor <a href="https://people.eecs.berkeley.edu/svlevine/">Sergey Levine</a>.
               </p>
@@ -42,7 +44,7 @@
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Research</heading>
-              <p>My research goal is to design algorithms that can enable agents to continuously interact, learn and perform complex tasks in their environments. Currently, I am working on designing deep reinforcement and imitation learning methods that can endow robots with diverse, transferable and composable skills.
+              <p>My research goal is to design algorithms that can enable agents to continuously interact, learn, and perform complex tasks in their environments. To this end, I am interested in learning <strong>Visuomotor Priors for Behavior Transfer</strong>: leveraging past interactions to learn both visual and control priors that allows agent to quickly adapt to new environments.
               </p>
               <p>In the past, I have worked on using deep learning for state estimation, building model-based deep reinforcement learning algorithms for robotics and learning dynamics model, with the help of physics engines, in the robotics domain.               
               </p>
@@ -52,19 +54,72 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/opal_kitchen.gif" alt="PontTuset" width="160" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://arxiv.org/pdf/2010.13611.pdf">
+                <papertitle>OPAL: Offline Primitive Discovery for Accelerating Offline Reinforcement Learning</papertitle>
+              </a>
+              <br>
+              <strong>Anurag Ajay</strong>,
+              <a href="https://aviralkumar2907.github.io/">Aviral Kumar</a>,
+              <a href="https://people.csail.mit.edu/pulkitag/">Pulkit Agrawal</a>, 
+              <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a>,                                
+              <a href="https://research.google/people/105364/">Ofir Nachum</a>
+              <br>
+              <em>ICLR</em>, 2021 (In Submission) 
+              <br>
+              <a href="https://arxiv.org/abs/2010.13611">arXiv</a> /
+              <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:YmRslK90AbEJ:scholar.google.com/&output=citation&scisdr=CgWycf-5EIKnl0-LKyc:AAGBfm0AAAAAX6iOMyfJY9QWEIeCAVtkUTkP0ttu7fsq&scisig=AAGBfm0AAAAAX6iOM4n43YaYFRdTqI8QwiHo6VMewwCN&scisf=4&ct=citation&cd=-1&hl=en">bibtex</a> /
+              <a href="https://sites.google.com/view/opal-iclr">project page</a>
+              <p></p>
+              <p> When presented with offline data composed of a variety of behaviors, an effective way to leverage this data is to extract a continuous space of recurring and temporally extended primitive behaviors before using these primitives for downstream task learning. Primitives extracted in this way serve two purposes: they delineate the behaviors that are supported by the data from those that are not, making them useful for avoiding distributional shift in offline RL; and they provide a degree of temporal abstraction, which reduces the effective horizon yielding better learning in theory, and improved offline RL in practice.
+              </p>
+            </td>
+          </tr> 
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/eap.png" alt="PontTuset" width="160" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://biases-invariances-generalization.github.io/pdf/big_11.pdf">
+                <papertitle>Learning Action Priors for Visuomotor transfer</papertitle>
+              </a>
+              <br>
+              <strong>Anurag Ajay</strong>,
+              <a href="http://people.csail.mit.edu/pulkitag/">Pulkit Agrawal</a>,                                              
+              <br>
+              <em>ICML Inductive Biases, Invariances and Generalization in RL (BIG) Workshop</em>, 2020
+              <br>
+              <p></p>
+              <p> We learn a latent space for past useful action trajectories using an autoencoding model and explore in the learned space which improves performance in the context of transfer learning across tasks and in multi-task reinforcement learning.
+              </p>
+            </td>
+          </tr>          
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
               <img src="images/point_res.png" alt="PontTuset" width="160" style="border-style: none">
             </td>
             <td width="75%" valign="middle">
+              <a href="https://arxiv.org/pdf/2009.03994.pdf">
                 <papertitle>Long-Horizon Prediction and Uncertainty Propagation with Residual
                 Point Contact Learners</papertitle>
+              </a>
               <br>              
               <a href="http://nfazeli.mit.edu/">Nima Fazeli</a>,
               <strong>Anurag Ajay</strong>,
               <a href="http://meche.mit.edu/people/faculty/ALBERTOR@MIT.EDU">Alberto Rodriguez</a>
               <br>
-              <em>ICRA</em>, 2020 &nbsp (In submission)
+              <em>ICRA</em>, 2020 
               <br>
+              <a href="https://arxiv.org/abs/2009.03994">arXiv</a> /
+              <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:EqMc5MzIgyEJ:scholar.google.com/&output=citation&scisdr=CgWycf-5EIKnl0-HhE8:AAGBfm0AAAAAX6iCnE97YZhxT6JR0qTeNk6GZpJPVIZg&scisig=AAGBfm0AAAAAX6iCnB6OihFnYDezlPl9OaisSEtOG7HY&scisf=4&ct=citation&cd=-1&hl=en">bibtex</a>
               <p></p>
+              <p> We propose a self-supervised approach to learning residual models for rigid-body simulators that exploits corrections of contact models to refine predictive performance and propagate uncertainty.
+              </p>
+            </td>
             </td>
           </tr>
 
